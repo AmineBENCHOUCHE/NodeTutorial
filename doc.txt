@@ -1,0 +1,14 @@
+STREAMS
+    To  read or write sequentially
+    Handy for long file
+    by default the size of the buffer is 64 kb
+    To control the size you must use highWaterMark as a 2nd arg of createdReadStream function
+
+    const { createReadStream } = require("fs");
+    const stream = createReadStream("./content/big.txt", { highWaterMark: 90000, encoding: 'utf8' });
+
+    stream.on("data", (result) => {
+    console.log(result);
+    });
+
+ 

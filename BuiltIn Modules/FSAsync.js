@@ -1,4 +1,3 @@
-const { log } = require("console");
 const { readFile, writeFile } = require("fs");
 
 //CALLBACK HELL
